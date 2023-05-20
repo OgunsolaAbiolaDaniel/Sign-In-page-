@@ -1,0 +1,120 @@
+*,*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color:#ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+    text-decoration: underline #231f1e;
+}
+.ere-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.side-a{
+    display: none;
+}
+
+.side-b {
+    width: 100%;
+    height: 100vh;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-b h2 {
+    font-size:24px;
+    font-weight:bold;
+    color: #231f1e;
+}
+.side-b p, .side-b a {
+    font-size:12px;
+    font-weight:bold;
+    color: #231f1e;
+}
+.side-b form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.side-b form .ere-form-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.side-b form .ere-form-control label {
+    font-size:10px;
+    font-weight:bold;
+    color: #231f1e;
+}
+.side-b form .ere-form-control input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #231f1e;
+    outline: none;
+}
+.side-b form .ere-form-control a {
+    display: block;
+    text-align: center;
+    font-size:12px;
+    font-weight:bold;
+}
+.side-b form .ere-form-control button {
+    width: 100%;
+    border: none;
+    background-color: #231f1e;
+    color: #ffffff;
+    padding: 14px;
+    cursor: pointer;
+}
+.side-b form .ere-form-control button:hover {
+    background-color: #686868;
+}
+.side-b form .ere-form-control button.googleBtn {
+    background-color: #ffffff;
+    color: #231f1e;
+    box-shadow: 1px 5px 5px rgb(235, 235, 235);
+}
+
+@media screen and (min-width: 768px) {
+    .ere-container{
+        flex-direction: row;
+    }
+    .side-a {
+        width: 30%;
+        display: block;
+        overflow: hidden;
+        height: 100vh;
+    }
+    .side-a img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .side-b {
+        width: 70%;
+        display: block;
+        padding: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .side-a {
+        width: 40%;
+    }
+    .side-b {
+        width: 60%;
+        padding: 50px 150px;
+    }
+}
